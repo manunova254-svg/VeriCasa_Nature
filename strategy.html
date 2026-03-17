@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agri-Business Bootcamp</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- stra1 starts -->
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: linen;
+}
+.hero {
+    background: linear-gradient(rgba(0,100,0,0.7), rgba(0,100,0,0.7)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+.section-title {
+    color: darkgreen;
+    margin-bottom: 20px;
+}
+.card {
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+.table thead {
+    background-color: darkgreen;
+    color: white;
+}
+footer {
+    background: darkgreen;
+    color: white;
+    padding: 20px;
+}
+</style>
+<!-- stra1 ends -->
+
+
+<style>
+body {font-family:'Poppins',sans-serif;background:linen;scroll-behavior:smooth;}
+.navbar {background:darkgreen;}
+.navbar a {color:white!important;font-weight:500;}
+.hero {
+    background:linear-gradient(rgba(0,100,0,0.7),rgba(0,100,0,0.7)),url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
+    background-size:cover;color:white;padding:120px 20px;text-align:center;
+}
+.hero h1 {font-size:3rem;font-weight:600;}
+.section-title {color:darkgreen;margin:50px 0 20px;}
+.card {border:none;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);transition:0.4s;}
+.card:hover {transform:translateY(-8px) scale(1.02);}
+.progress {height:20px;border-radius:20px;}
+footer {background:darkgreen;color:white;padding:20px;margin-top:50px;}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand text-white" href="index.html"><h2>Return Home</h2></a>
+</div>
+</nav>
+
+<div class="hero">
+<h4 data-aos="fade-up">Growth Strategy</h4>
+<h1 data-aos="fade-up">Agri-Business Bootcamp</h1>
+<h1 data-aos="fade-up">VerCasa Nature</h1>
+<p data-aos="fade-up" data-aos-delay="200">Transforming Livestock into Profitable Enterprises</p>
+</div>
+
+ <!-- 1st actual content starts  -->
+<div class="container">
+<h4 data-aos="fade-up text-center" style="margin-top: 10px;">Let's separate the myths from the facts.</h4>
+<h2 class="section-title" data-aos="fade-right">Industry Statistics</h2>
+<canvas id="statsChart" data-aos="zoom-in"></canvas>
+
+<h2 class="section-title" data-aos="fade-right">Feed Deficit</h2>
+<div class="progress" data-aos="fade-up">
+<div class="progress-bar bg-success" style="width:60%">60% Deficit</div>
+</div>
+
+<h2 class="section-title" data-aos="fade-right">Key Insights</h2>
+<div class="row">
+<div class="col-md-4" data-aos="flip-left">
+<div class="card p-3"><h5>Feed is Profit</h5><p>Control feed = control margins.</p></div>
+</div>
+<div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+<div class="card p-3"><h5>Vertical Integration</h5><p>Production + processing + market.</p></div>
+</div>
+<div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+<div class="card p-3"><h5>Data Farming</h5><p>Track FCR, mortality, growth.</p></div>
+</div>
+</div>
+
+<h2 class="section-title" data-aos="fade-right">Interactive Learning Modules</h2>
+<div class="accordion" id="modules">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#m1">Feeds & Nutrition</button>
+</h2>
+<div id="m1" class="accordion-collapse collapse show">
+<div class="accordion-body">BSF, Azolla, Silage strategies for cost reduction.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m2">Disease Control</button>
+</h2>
+<div id="m2" class="accordion-collapse collapse">
+<div class="accordion-body">Vaccination, deworming, biosecurity protocols.</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m3">Finance & Scaling</button>
+</h2>
+<div id="m3" class="accordion-collapse collapse">
+<div class="accordion-body">Loans, SACCOs, blended finance models.</div>
+</div>
+</div>
+</div>
+
+</div>
+<!-- 1st actual content ends here -->
+
+
+
+ <!-- 2nd actual ontent starts -->
+<div class="container my-5">
+
+<h2 class="section-title">1. Industry Context & Strategic Opportunity</h2>
+<div class="row">
+<div class="col-md-6">
+<div class="card p-3">
+<h5>Macroeconomic Importance</h5>
+<ul>
+<li>~12% of Kenya’s GDP</li>
+<li>47% of agricultural GDP</li>
+<li>~50% workforce employment</li>
+<li>47M sheep & goats, 15–18M cattle, 38–57M poultry</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card p-3">
+<h5>Demand-Supply Gap</h5>
+<ul>
+<li>Meat deficit: ~300,000 MT</li>
+<li>Feed deficit: ~60%</li>
+<li>Post-harvest loss: ~46%</li>
+<li>Feed prices ↑ ~37%</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 class="section-title mt-5">2. Agro-Business Development Model</h2>
+<div class="card p-4">
+<p><strong>Integrated Value Chain:</strong> Feed Production → Livestock → Infrastructure → Processing → Market Linkage</p>
+</div>
+
+<h3 class="mt-4">Feed Categories</h3>
+<table class="table table-bordered">
+<thead>
+<tr><th>Livestock</th><th>Feed Type</th></tr>
+</thead>
+<tbody>
+<tr><td>Cattle</td><td>Hay, silage, Napier grass, concentrates</td></tr>
+<tr><td>Goats/Sheep</td><td>Browse shrubs, hay, crop residues</td></tr>
+<tr><td>Poultry</td><td>Starter, grower, layers mash</td></tr>
+</tbody>
+</table>
+
+<h3>Feed Innovation</h3>
+<ul>
+<li>Black Soldier Fly larvae (BSF)</li>
+<li>Azolla & duckweed (reduce cost up to 75%)</li>
+<li>Crop residues (maize stover, wheat bran, rice husks)</li>
+</ul>
+
+<h3>Revenue Model</h3>
+<table class="table table-bordered">
+<thead>
+<tr><th>Stream</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Direct sales</td><td>Hay, silage, pellets</td></tr>
+<tr><td>Contract supply</td><td>Dairy/poultry farms</td></tr>
+<tr><td>On-farm use</td><td>Cost reduction</td></tr>
+</tbody>
+</table>
+
+<h2 class="section-title mt-5">3. Disease & Parasite Mitigation</h2>
+<div class="card p-3">
+<ul>
+<li>Biosecurity: restricted access, footbaths, quarantine</li>
+<li>Vaccination: FMD, LSD, Newcastle, PPR</li>
+<li>Deworming every 3 months</li>
+<li>Tick control via spraying/dipping</li>
+<li>AI monitoring for early detection</li>
+</ul>
+</div>
+
+<h2 class="section-title mt-5">4. Credit & Financing Strategy</h2>
+<div class="row">
+<div class="col-md-6">
+<div class="card p-3">
+<h5>Formal</h5>
+<ul>
+<li>AFC</li>
+<li>Banks</li>
+<li>SACCOs</li>
+</ul>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card p-3">
+<h5>Informal</h5>
+<ul>
+<li>Chamas</li>
+<li>Supplier credit</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3 class="mt-4">Strategy</h3>
+<ul>
+<li>Bankable plan</li>
+<li>Collateral (land, insurance)</li>
+<li>Blended finance (equity + debt + grants)</li>
+</ul>
+
+<h2 class="section-title mt-5">5. Operational Model</h2>
+<div class="card p-3">
+<ul>
+<li><strong>Phase 1:</strong> Infrastructure, poultry, feed</li>
+<li><strong>Phase 2:</strong> Goats/sheep, expansion</li>
+<li><strong>Phase 3:</strong> Cattle, value addition</li>
+</ul>
+</div>
+
+<h3 class="mt-4">Revenue Streams</h3>
+<table class="table table-bordered">
+<thead>
+<tr><th>Stream</th><th>Stability</th></tr>
+</thead>
+<tbody>
+<tr><td>Poultry eggs</td><td>High</td></tr>
+<tr><td>Milk</td><td>Medium</td></tr>
+<tr><td>Meat</td><td>Seasonal</td></tr>
+<tr><td>Feed sales</td><td>High</td></tr>
+</tbody>
+</table>
+
+<h2 class="section-title mt-5">6. Risks & Mitigation</h2>
+<table class="table table-bordered">
+<thead>
+<tr><th>Risk</th><th>Mitigation</th></tr>
+</thead>
+<tbody>
+<tr><td>Feed shortages</td><td>Own production</td></tr>
+<tr><td>Disease</td><td>Biosecurity</td></tr>
+<tr><td>Market volatility</td><td>Contracts</td></tr>
+<tr><td>Climate change</td><td>Silage & irrigation</td></tr>
+</tbody>
+</table>
+
+<h2 class="section-title mt-5">7. Strategic Insights</h2>
+<div class="card p-3">
+<ul>
+<li>Feed is the real business</li>
+<li>Vertical integration wins</li>
+<li>Data-driven farming (track FCR, mortality, growth)</li>
+</ul>
+</div>
+
+<h2 class="section-title mt-5">8. Conclusion</h2>
+<div class="card p-3">
+<p>This sector is undersupplied, growing rapidly, and highly inefficient—creating massive opportunity.</p>
+<ul>
+<li>Control feed supply</li>
+<li>Optimize animal health</li>
+<li>Own market channels</li>
+<li>Leverage financing intelligently</li>
+</ul>
+</div>
+
+</div>
+<!-- 2nd actual content ends -->
+
+     <!-- footer section starts here -->
+      <footer style="background-color:beige; padding: 5px;">
+        <!-- 1st row starts here -->
+         <!-- generic footer details  -->
+        <div class="row">
+            <!-- col 1 links on navbar -->
+            <div class="col-3 col-md-3">
+                <h4>Links</h4>
+                <nav class="text-dark">
+                    <a href="join.html">Partner with us</a><br>
+                    <a href="join.html">Farm loan Repayment</a><br>
+                    <a href="crop.html">Early harvest Plans</a><br>
+                    <a href="join.html">Exclusive Mentorships.</a><br>
+                    <a href="join.html">Exclusive Farm sites</a><br>
+                </nav>
+            </div>
+            <!-- col 2  topics -->
+            <div class="col-3 col-md-3 text-dark">
+                <h3>Early Planting n' Harvesting Plans</h3>
+                <p>Be weather-conscious and timely planter n' harvester.</p>
+
+                <h3>Farm Loan repayment</h3>
+                <p>Get yourself insurance against prompt debtors and risky investments.</p>
+            </div>
+            <!-- col 3 contact -->
+            <div class="col-3 col-md-3 text-dark">
+                 <h4 class="text-center">Stay Connected</h4>
+            <br>
+            <a href="https://www.facebook.com">
+                <img src="images/fb.png" alt="facebook icon">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="images/in.png" alt="instagram icon">
+            </a>
+            <a href="https://www.twitter.com" blanck="_blank">
+                <img src="images/x.png" alt="Twitter Icon">
+            </a>
+
+            <p class="text-dark">Stay in the know with us.</p>
+
+           <a href="join.html" class="btn btn-outline-primary">Join us</a>
+            </div>
+            <!-- col 4 reachout form -->
+             <div class="col-3 col-md-3 text-dark">
+            <h4 class="text-center">Contact us</h4>
+            <!-- form starts here  -->
+             <form>
+                <input type="email" placeholder="Enter your email..." class="form-control">
+                <br>
+                <textarea style="border-top-right-radius: 18px; border-bottom-left-radius: 18px; box-shadow: 0 0 0 3px rgb(230, 175, 175);" name="" id="" placeholder="Leave a comment..."></textarea>
+                <br><br>
+                <input type="submit" value="Send Message" class="btn btn-outline-danger">
+             </form>
+             <!-- end of the form  -->
+           </div>
+        </div>
+        <!-- 1st row ends here -->
+
+
+        <!-- 2nd row starts here -->
+         <!-- Sponsors section  -->
+<div style="border-bottom: 10px solid #888; padding-bottom: 10px; padding-top: 12px;" class="row bg-dark">
+    <h5 style="text-decoration: overline;" class="display-6 text-center text-white">Strategic sponsors and partners.</h5>
+             <!-- icon of sponsors  -->
+              <!-- SAFARICOM LOGO -->
+        <div class="col-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                  <img class="sponsor" src="images/saflogo.png" alt="Safaricom Sponsor logo">
+                </div>
+            </div>
+        </div>
+        <!-- Equity Bank Spansor -->
+         <div class="col-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                   <img class="sponsor" src="images/equity.jpeg" alt="Equity Bank Logo">
+                </div>
+            </div>
+        </div>
+         <!-- KCB Bank Spansor -->
+          <div class="col-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                  <img class="sponsor" src="images/kcb.png" alt="KCB Bank Logo">
+                </div>
+            </div>
+        </div>
+          <!-- Mwalimu Sacco Spansor -->
+           <div class="col-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                  <img class="sponsor" src="images/mwalimu.png" alt="Mwalimu Sacco  Logo">
+                </div>
+            </div>
+        </div>
+</div>
+         <!-- 2nd row ends here -->
+
+
+        <!-- 3nd row starts here == copyright-->
+         <div class="row text-white bg-dark">
+            <div class="col-md-12 text-center">
+                <p>FARMING | ENTERPRENEURSHIP | MENTORSHIP</p>
+                <h5 class="bg-dark text-white text-center p-3">Developed by Gekara ltd</h5>
+                <small>&copy;2026 VeriCasa Nature. All rights reserved.</small>
+            </div>
+         </div>
+         <!-- 3nd row ends here -->
+      </footer>
+      <!-- footer section ends here  -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+
+const ctx=document.getElementById('statsChart');
+new Chart(ctx,{
+ type:'bar',
+ data:{
+ labels:['Sheep & Goats','Cattle','Poultry'],
+ datasets:[{label:'Population (Millions)',data:[47,18,57]}]
+ }
+});
+</script>
+
+</body>
+</html>

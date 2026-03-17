@@ -1,0 +1,93 @@
+.body{
+    background-image: url(images/farm1.jpg);
+   background-position: center;
+}
+
+/* css for firldset and legend */
+.set{
+    border: 2px solid black;
+    border-radius: 21px ;
+}
+
+/* standard images */
+.std{
+    height: 10px;
+    width: 25px;
+}
+
+.details{
+    border: 2px dotted;
+    border-radius:21px ;
+    
+}
+
+.faded{
+           color: #888;    /* transparent colour */
+        }
+
+main{
+   background-color: azure;
+}
+
+/* navbar section */
+.cool{
+    font-size: larger;
+    font-weight: 900;
+    width: 140px;
+    box-shadow: 1 1 1 1 9 9px aqua;
+    border: 1px solid whitesmoke;
+    border-radius: 21px;
+}
+
+.cool:hover{
+    text-decoration: overline;
+    background-color: aqua;
+    border: 2px solid black;
+    border-top-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
+
+/* VeriCasa logo  */
+.glow{
+    background-color: rgb(76, 226, 76);
+    border: 2px solid green;
+    border-top-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+    padding: 15px;
+    filter: brightness(0.6);
+    animation: logo 1S infinite linear;
+}
+
+@keyframes logo {
+      0%{transform: scale(1.2);}
+      8%{transform: scale(1.2);}
+      8%{transform: scale(1.2);}
+      2%{border-color: bisque;}
+    }
+
+.glow:hover{
+    transition: transform 2s ease-in-out;
+    transform: scale(1.2);
+    box-shadow: 0 0 21px rgb(10, 223, 10) ;
+   
+}
+
+/* standard sized images */
+.img{
+    height: 200px;
+    width: 200px;
+}
+
+video{
+    border-top-left-radius: 91px;
+     border-bottom-right-radius: 91px;
+}
+
+
+
+.sponsor{
+  height: 100px;
+  width: 90%;
+  aspect-ratio: 50/20;
+  object-fit: cover;
+}
